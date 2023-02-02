@@ -1,31 +1,52 @@
+/**
+ * @file main.cpp
+ * @author LiloZz
+ * @brief calculating resistors
+ * @version 0.1
+ * @date 2023-02-01
+ *
+ * @copyright Copyright FrenchBakery (c) 2023
+ *
+ */
+
 #include <iostream>
 
-struct coord
+void series_circut(int w1, int w2)
 {
-private:
-    int z;
+    int w = w1 + w2;
 
-public:
-    int x, y;
+    std::cout << "Total Resistance" << w;
+}
 
-    int sum(int _c)
-    {
-        return x + y + _c;
-    }
-};
-
-void myfunc(int _a)
+void parallel_circut(int w1, int w2)
 {
-    std::cout << _a << std::endl;
+    int w = w1 + w2;
+
+    std::cout << "Total Resistance" << w;
 }
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
+    int r1;
+    int r2;
+    std::string x;
 
-    coord mylocation;
+    std::cout << "Calculator for comlex resistors" << std::endl;
+    std::cout << "Your resistor value  in Ohm:";
+    std::cin >> r1;
+    std::cin >> r2;
+    std::cout << "Do you want to calculate a series circut(s) or a parallel circut(p)";
+    std::cin >> x;
 
-    std::cout << mylocation.sum(85) << std::endl;
+    if (x == "s")
+    {
+        series_circut(r1, r2);
+    }
+
+    else if (x == "p")
+    {
+        series_circut(r1, r2);
+    }
 
     return 0;
 }
